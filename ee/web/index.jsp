@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
- <a href="page.jps/users.jsp">Users</a>
+ <a href="page.jps/users.jsp"> List Freinds Users</a>
   </body>
 </html>
