@@ -5,6 +5,7 @@ import model.Users;
 import java.util.List;
 
 public interface UsersService {
+
     void addUser(Users users);
 
     void updateUsers(Users users);

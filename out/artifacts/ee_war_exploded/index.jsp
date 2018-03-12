@@ -13,12 +13,13 @@
   <body>
 
   <style>
+
       body{
           background-color: deeppink;
       }
       h1{
           color: aqua;
-          margin-left: 200px;
+          margin: auto;
       }
       a{
           color: aqua;
@@ -33,20 +34,24 @@
       img:hover {
           border:10px solid;
       }
+    #reg{
+      margin-left: 1000px;
+      color: black;
+    }
+    #g2{
+      margin-left: 800px;
+    }
 
   </style>
-  <script>
-      jQuery('document').ready(function () {
 
-      })
-  </script>
   <br/>
   <br/>
   <div>
-      <h1>FIND FREINDS</h1>
+
   </div>
 <div>
-    <a href="page.jps/users.jsp"> List Users</a>                   <a id="reg" href="page.jps/registration.jsp"> Registration</a>
+    <a href="page.jps/user.jsp"> List Users</a>                   <a id="reg"  href="page.jps/user.jsp" > Registration</a>
+
 </div>
 
   <br/>
@@ -78,9 +83,9 @@
   width="100" height="80">
 
   <br/>
-  <br/>
+
   <br/>
   <img id="g" src="https://avatanplus.com/files/resources/mid/5a1b1dacf3a9015ff9ebebc6.png" width="400">
-  <img src="https://avatanplus.com/files/resources/mid/570d0bb4e78841540af5bad4.png" width="250">
+  <img id="g2" src="https://avatanplus.com/files/resources/mid/570d0bb4e78841540af5bad4.png" width="250">
   </body>
 </html>

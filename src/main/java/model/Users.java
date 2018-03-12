@@ -3,7 +3,7 @@ package model;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "Users")
+@Table (name = "user")
 public class Users {
     @Id
     @Column (name = "id")
@@ -13,16 +13,25 @@ public class Users {
     private String name;
     @Column(name = "lastName")
     private String lastName;
+    @Column(name = "email")
+    private String email;
+    @Column (name = "mobile")
+    private int mobile;
 
-    @OneToOne
-    private DataUsers dataUsers;
-
-    public DataUsers getDataUsers() {
-        return dataUsers;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDataUsers(DataUsers dataUsers) {
-        this.dataUsers = dataUsers;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(int mobile) {
+        this.mobile = mobile;
     }
 
     public int getId() {

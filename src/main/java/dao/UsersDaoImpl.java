@@ -3,10 +3,12 @@ package dao;
 import model.Users;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.logging.Logger;
 
+@Repository
 public class UsersDaoImpl implements UsersDao {
 
     private static final Logger logger = Logger.getLogger(UsersDaoImpl.class.getName());
@@ -50,6 +52,7 @@ public class UsersDaoImpl implements UsersDao {
     }
 
     @Override
+    @SuppressWarnings("uncheked")
     public List<Users> listUsers() {
         Session session = this.sessionFactory.getCurrentSession();
         List<Users> usersList = session.createQuery("from Users").list();

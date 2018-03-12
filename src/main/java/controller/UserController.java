@@ -23,32 +23,32 @@ public class UserController {
         this.usersService = usersService;
     }
 
-    @RequestMapping (value = "users", method = RequestMethod.GET)
+    @RequestMapping (value = "user", method = RequestMethod.GET)
     public String listUsers (Model model){
         model.addAttribute("users", new Users());
         model.addAttribute("listUsers", this.usersService.listUsers());
-        return "users";
+        return "user";
     }
 
-    @RequestMapping (value = "/users/add", method = RequestMethod.POST)
+    @RequestMapping (value = "/user/add", method = RequestMethod.POST)
     public String addUser (@ModelAttribute("users") Users users){
         if(users.getId() == 0){
             this.usersService.addUser(users);
         }else {
             this.usersService.updateUsers(users);
         }
-        return "redirect:/users";
+        return "redirect:/user";
     }
     @RequestMapping ("/remove/ {id}")
     public String removeUser(@PathVariable("id") int id){
         this.usersService.removeUser(id);
-        return "redirect:/users";
+        return "redirect:/user";
     }
     @RequestMapping("edit/{id}")
     public String editUser(@PathVariable ("id") int id,Model model){
         model.addAttribute("users", this.usersService.getUserById(id));
         model.addAttribute("listUsers", this.usersService.listUsers());
-        return "users";
+        return "user";
         }
 
 
